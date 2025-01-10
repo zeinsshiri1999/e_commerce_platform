@@ -1,0 +1,71 @@
+/* 基础公共样式：清除默认样式 + 设置通用样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #E4E6E9;
+}
+
+html[lang="zh-CN"] body {
+  font: 14px/1.5 /*system-ui,*/ -apple-system, "PingFangSC-Regular", "Microsoft Yahei", "Noto Sans", "WenQuanYi Micro Hei", "Heiti SC", sans-serif;
+  color: #333;
+}
+
+html[lang="en"] body {
+  font: 14px/1.5 /*system-ui,*/ -apple-system, Tahoma, Arial, sans-serif;
+  color: #333;
+}
+
+p:lang(en), span:lang(en),a:lang(en) {
+  font: 14px/1.5 /*system-ui,*/ -apple-system, Tahoma, Arial, sans-serif;
+}
+
+
+li {
+  list-style: none;
+}
+
+em,
+i{
+  font-style: normal;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* 去除input默认样式 */
+input {
+  border: none;
+  outline: none;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+.text-overflow {
+  /* 1. 不允许文字换行  强制文字一行显示*/
+  white-space: nowrap;
+  /* 2. 溢出隐藏 */
+  overflow: hidden;
+  /* 3. 文字溢出用省略号代替 */
+  text-overflow: ellipsis;
+}
