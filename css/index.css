@@ -150,6 +150,8 @@
 }
 
 .footer .flood1 ul {
+    width: 100%;
+
     display: flex;
   /* 缝隙相同 */
     justify-content: space-evenly;
@@ -193,4 +195,93 @@
 .footer .flood1 ul li p {
     font-size: 28px;
     line-height: 58px;
+}
+
+.footer .flood2{
+    height: 300px;
+    padding: 60px 0;
+}
+
+.footer .flood2 .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .flood2 .left{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .flood2 .left dl{
+    margin-right: 80px;
+}
+
+.footer .flood2 .left dl dt{
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.footer .flood2 .left dd a{
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.footer .flood2 .left dd a:hover{
+    text-decoration: underline;
+    color: var(--main-theme-color);
+}
+
+.footer .flood2 .left i{
+    color: var(--main-theme-color);
+}
+
+.footer .flood2 .left dl:last-child{
+    margin-left: 55px;
+    margin-right: 0;
+}
+
+.footer .flood2 .right ul{
+    display: flex;
+}
+
+.footer .flood2 .right li:nth-child(2){
+    margin-left: 55px;
+}
+
+.footer .flood2 .right img{
+    width: 120px;
+    height: 120px;
+}
+
+.footer .flood2 .right p {
+    margin-top: 10px;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.footer .flood3 .wrapper{
+    display: block;
+}
+
+.footer .flood3 .wrapper p:first-child{
+    text-align: center;
+    line-height: 30px;
+    color: var(--text-color);
+}
+
+.footer .flood3 .wrapper p:first-child a:hover{
+    color: var(--main-theme-color);
+}
+
+.footer .flood3 .wrapper p:first-child span{
+    margin: 0 10px;
+}
+
+.footer .flood3 .wrapper p:first-child a{
+    
+}
+
+.footer .flood3 .wrapper p:last-child {
+    text-align: center;
 }
