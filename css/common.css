@@ -57,6 +57,10 @@
     --breakpoint-sm: 480px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 1024px;
+
+    /*logo size*/
+    --logo-width: 200px;
+    --logo-height: 88px;
 }
 
 .full_column {
@@ -70,9 +74,160 @@
     width: 80%;
     margin: 0 auto;
 }
+/* Global Style end */
 
-/*user_button */
+/* logo */
+.header .logo {
+    width: var(--logo-width);
+    height: var(--logo-height);
+}
+
+.header .logo a{
+    display: block;/*a是自适应content大小的box*/
+    width: var(--logo-width);
+    height: var(--logo-height);
+    
+    background-image: url(../images/logo.png);
+
+    text-indent: -9999rem;
+    overflow: hidden;/*不显示用于seo的文字;类似font-size: 0; */
+}
+/* logo end*/
+
+/* search start*/
+.header .search {
+    position: relative;
+
+    margin-left: 100px;
+
+    width: 220px;
+    height: 40px;
+    margin-top: 22px;
+    /* background-color: #fff; */
+}
+
+.search input {
+    display: block;
+    width: 77%;
+    height: 100%;
+    padding: 0 0 0 28px;/*局限文本显示范围，空白处放icon*/
+
+    background-color:#fff;
+    outline: none;/*点击不显示外边框*/
+    border-radius: 25px;
+    border: 0 solid #F4F4F4;
+    transition: all .3s;
+}
+
+.search i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+
+    font-size: 20px;
+    color: #ccc;
+    
+    cursor: pointer;/* 鼠标变成小手 */
+}
+
+/* 修改 placeholder 里面的文字样式 */
+.search input::placeholder {
+    color: #ccc;
+}
+  
+  /* input获得光标 */
+.search input:focus {
+    width: 100%;
+}
+/* search end*/
+
+/* nav start*/
+.header .nav {
+    width: 40%;
+    margin: 15px 0 15px 41px;
+    
+    padding: 10px 0 0 15px;
+    display: flex;
+    
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 15px;
+}
+
+.header .nav li{
+    width: 50px;
+    height: 42px;
+    margin-right: 15px;
+
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.header .nav li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    padding-left: 6px;
+
+    font-size: 19px;
+    line-height: 42px;
+    transition: all .3s;
+}
+
+.header .nav li:hover{
+    /* margin-bottom: -5px; */
+}
+
+.header .nav li a:hover{
+    color: var(--main-theme-color);
+    background-color:white;
+    border-bottom: 2px solid var(--main-theme-color);
+    box-shadow: 0px 1px 2px 0px rgba(211, 211, 211, 0.7);
+}
+/* nav end*/
+
+/*user_button start*/
+.header .user_button {
+    display: flex;
+    position: relative;
+}
+
+.header .user_button li{
+    padding: 0 15px;
+}
+
+.header .user_button li a{
+    color: #fff;
+    font-size: 14px;
+}
+
+.header .user_button li a:hover{
+    color: var(--main-theme-color);
+}
+
+.header .user_button i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    font-size: 15px;
+}
+
+/*user_button end*/
 
 
-/* header and footer组件 */
+
+
+/* header = top+bottom  */
+/* top */
+
+/* bottom */
+
+/* header  end*/
+
+
+
+
+/* footer */
 
