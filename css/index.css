@@ -182,3 +182,438 @@
 .footer .flood3 .wrapper p:last-child {
     text-align: center;
 }
+
+/* banner start*/
+.banner {
+    background-color: #F5F5F5;
+}
+
+.banner .slideshow{
+    position: relative;/*用于给轮播图修饰元素定位*/
+    overflow: hidden;
+}
+
+.banner .slideshow ul{
+  display: flex;
+  width: 300%;
+}
+
+.banner .slideshow .circle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    display: flex;
+    padding: var(--small-space);
+
+    border-radius: 15px;
+    background-color: tranparent;    
+}
+
+.banner .circle li{
+    width: 22px;
+    height: 22px;
+    margin-left: 10px;
+    padding: 4px;
+    background-color: transparent;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.banner .circle li:first-child{
+    margin-left: 0;
+}
+
+.banner .circle li::after {/*li里面放一个空盒子*/
+    content: "";
+    /* 转换块级才有大小 */
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.banner .circle .active {/*默认选中的小点*/
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner .circle li:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.banner .wrapper{
+    position: relative;
+}
+
+.banner .side_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, .42)
+}
+
+.banner .side_nav li{
+  position: relative;
+
+  height: 50px;
+  padding-left: 29px;
+  line-height: 50px;
+
+  transition: all 0.77s;
+}
+
+.banner .side_nav li::after {
+    /* 到iconfont.css 里面去复制 */
+    content: "\e687";
+    position: absolute;
+    top: 0px;
+    right: 29px;
+
+    color: #fff;
+    /* 声明字体图标的字体 */
+    font-family: iconfont;
+}
+
+.banner .side_nav li:hover {
+    background-color: var(--main-theme-color);
+}
+
+.banner .side_nav li a {
+    color: #fff;
+    font-size: 14px;
+}
+  
+.banner .side_nav li a:first-child {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+
+/* banner end*/
+
+/* card start*/
+
+.hd{
+    display: flex;
+    justify-content: space-between;
+    /* 侧轴垂直居中 */
+    align-items: center;
+    width: 100%;
+    padding: 40px 0 30px;
+}
+
+.hd h2 {
+    font-size: 30px;
+}
+
+.hd h2 span {
+    font-size: 16px;
+    color: var(--secondary-theme-color);
+    margin-left: 30px;
+}
+
+.hd .all {
+    font-size: 16px;
+    color: var(--secondary-theme-color);
+}
+
+.hd .all:hover {
+    color: var(--main-theme-color);
+}
+
+.card_display_bar .wrapper{
+    display: block;
+}
+
+.bd ul {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.bd ul li {
+    width: 304px;
+    height: 404px;
+    background-color: #EEF9F4;
+
+    text-align: center;
+
+    transition: all .3s;
+}
+  
+.bd ul li:hover {
+    margin-top: -5px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .42);
+}
+  
+.bd ul li a {
+    display: block;
+    height: 100%;
+}
+  
+.bd ul li .pic {
+    width: 100%;
+    height: 304px;
+}
+  
+.bd ul li h4 {
+    font-size: 20px;
+    margin: 18px 15px 9px;
+}
+  
+.bd ul li p {
+    color: #AA2113;
+    font-size: 17px;
+}
+  
+.bd ul li p span {
+    font-size: 22px;
+}
+
+/* card2 */
+.card_display_bar2{
+    background-color: #f5f5f5;
+    margin-top: 50px;
+}
+
+.card_display_bar2 .wrapper{
+    display: block;
+}
+
+.card_display_bar2 .hd {
+    position: relative;
+}
+  
+.card_display_bar2 .btn {
+    position: absolute;
+    top: 27px;
+    right: 0;
+    display: flex;
+}
+  
+.card_display_bar2 .btn a {
+    width: 20px;
+    height: 20px;
+    background-color: #e2e2e2;
+    margin-left: 12px;
+
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+}
+  
+.card_display_bar2 .btn .btnright {
+    background-color: var(--main-theme-color);
+}
+  
+.card_display_bar2 .bd li {
+    width: 244px;
+    height: 306px;
+}
+
+/* 让生鲜模块里面的li 一行显示 */
+.hd ul {
+    display: flex;
+    margin-right: 65px;
+}
+  
+.hd ul li {
+    margin-right: 13px;
+}
+
+.hd ul li:last-child {
+    margin-right: 0;
+}
+  
+.hd ul li a {
+    padding: 0 5px;
+}
+  
+/* 鼠标经过添加底色和文字颜色 */
+.hd ul li a:hover {
+    background-color: var(--main-theme-color);
+    color: #fff;
+}
+
+.card_display_bar3 .wrapper{
+    display: block;
+}
+
+.card_display_bar3 .content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_display_bar3 .content .left {
+    width: 248px;
+    height: 610px;
+}
+  
+.card_display_bar3 .content .right {
+    width: 968px;
+    height: 610px;
+}
+  
+.card_display_bar3 .content .right ul {
+    display: flex;
+    /* 强制换行 */
+    flex-wrap: wrap;
+}
+  
+.card_display_bar3 .content .right li {
+    overflow: hidden;
+    position: relative;
+    width: 242px;
+    height: 304px;
+    /* 颜色透明 transparent */
+    border: 2px solid transparent;
+  
+}
+  
+.card_display_bar3 .content .right li:hover {
+    /* border: 2px solid var(--lv); */
+    border-color: var(--main-theme-color);
+}
+  
+.card_display_bar3 .content .right li>a {
+    display: block;
+    height: 100%;
+    padding: 10px 0 0 20px;
+}
+  
+.card_display_bar3 .content .pic {
+    width: 200px;
+    height: 180px;
+}
+  
+.card_display_bar3 .content .info {
+    margin-top: 14px;
+    font-size: 16px;
+    line-height: 19px;
+}
+  
+.card_display_bar3 .content .info h5 {
+    font-size: 16px;
+}
+  
+.card_display_bar3 .content .price {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #AF2F22;
+  }
+  
+.card_display_bar3 .content .price span {
+    font-size: 22px;
+  }
+  
+.card_display_bar3 .content .find {
+    position: absolute;
+    left: 0;
+    bottom: -84px;
+
+    width: 242px;
+    height: 84px;
+    background-color: var(--main-theme-color);
+    padding: 15px 55px 0;
+
+    text-align: center;
+    /* 谁做动画（过渡）给谁加 */
+    transition: all .3s;
+  }
+  
+.card_display_bar3 .content .right li:hover .find {
+    bottom: 0;
+}
+  
+.card_display_bar3 .content .find h4 {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.11);
+    color: #fff;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+  
+.card_display_bar3 .content .find a {
+    color: #fff;
+    font-size: 13px;
+}
+  
+.card_display_bar3 .content .find a i {
+    font-size: 13px;
+}
+
+.card_display_bar4 .wrapper{
+    display: block;
+}
+
+.card_display_bar4 {
+    margin-bottom: 50px;
+}
+  
+  .card_display_bar4 .bd ul li {
+    width: 405px;
+    height: 355px;
+    background-color: #fff;
+  }
+  
+  .card_display_bar4 .bd ul li .pic {
+    position: relative;
+    width: 405px;
+    height: 288px;
+  }
+  
+  .card_display_bar4 .pic .txt {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 405px;
+    height: 90px;
+    /* background-color: skyblue; */
+    padding: 20px 15px 0;
+    text-align: left;
+    /* 渐变色  从红色到绿色  竖着*/
+    /* background-image: linear-gradient(red, green); */
+    /* background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  }
+  
+  .card_display_bar4 .pic .txt h5 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 5px;
+  }
+  
+  .card_display_bar4 .pic .txt .left p {
+    color: #fff;
+  }
+  
+  .card_display_bar4 .pic .right {
+    width: 79px;
+    height: 25px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 25px;
+    color: #AA2113;
+  }
+  
+  .card_display_bar4 .bd .desc {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 15px;
+  
+  }
+  
+  .card_display_bar4 .bd .desc p span {
+    color: #666;
+    font-size: 14px;
+    margin-right: 5px;
+  }
+/* card end*/
